@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form action"/NewUrl/" method = POST>
+        {% csrf_token %}
+    {{ form }}
+        <label for="NewUrl">New url:</label>
+        <input 
+    type="text"
+    id="URL"
+    required size= "45" 
+    maxlength =  2300
+    size = 100
+    placeholder="https://..."
+    name = URL>
+</div>
+<div>
+    <button>
+        Envoyer!
+    </button>
+</div>
+</form>
+
+{% endblock %}

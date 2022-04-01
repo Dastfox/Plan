@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from planning_app.views import index_app, redirection
+from accounts.views import index_acc, thanks
+
 
 urlpatterns = [
+    path('', redirection , name= 'index'),
+    path('take_me_to_internet', index_app, name= 'index_app'),
+    path('new',index_acc, name= 'index_acc'),
+    path('thanks',thanks, name='thanks'),
     path('admin/', admin.site.urls),
 ]

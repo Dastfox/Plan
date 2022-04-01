@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+ {% comment %} <form action "button" method="POST" target="_blank" >{% csrf_token %}
+    <button name = button href = {{ views.Query }}>Cliquez ici</button>
+  </form>  {% endcomment %}
+  <input type= button onclick = window.location.href= {{views.Query}}>
+
+
+{% endblock %}
