@@ -1,0 +1,5 @@
+{
+    "git.ignoreLimitWarning": true,
+    "appService.defaultWebAppToDeploy": "/subscriptions/e7ae7c87-ebaf-4749-9ab6-ea507f489259/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Internet-simutator",
+    "appService.deploySubpath": "src"
+}

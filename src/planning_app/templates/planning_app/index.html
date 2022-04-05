@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
- {% comment %} <form action "button" method="POST" target="_blank" >{% csrf_token %}
-    <button name = button href = {{ views.Query }}>Cliquez ici</button>
-  </form>  {% endcomment %}
-  <input type= button onclick = window.location.href= {{views.Query}}>
 
+<div>
+<form target="_blank">
+  <label > Cliquez sur le bouton pour aller sur internet</br></br></label>
+  <button class="button_TMTI" 
+  type="button" 
+  onclick=" history.go(0) ; window.open('{{Q}}', '_blank');" >
+ </button>
 
+</form>
+</div>
 {% endblock %}

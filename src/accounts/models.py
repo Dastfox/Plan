@@ -1,3 +1,4 @@
+from importlib.metadata import entry_points
 from pyexpat import model
 from typing import Counter
 from unicodedata import name
@@ -8,14 +9,11 @@ from django.db import models
 
 class Random_Link(models.Model):
         link = models.TextField(max_length=2300)
-        Counter = models.IntegerField
-        def __str__(self):
-                return self.Counter
         
-# class Counter(models.Model):
-#     def __init__(self, Cnumber):
-#         self.Cnumber = models.IntegerField(default=2)
-                                        
-
-       
+        
+        
+        def __str__(self):
+                return self.link
+        
+entry_list = list(Random_Link.objects.all())
     

@@ -5,19 +5,18 @@
     <form action"/NewUrl/" method = POST>
         {% csrf_token %}
     {{ form }}
-        <label for="NewUrl">New url:</label>
+        <label for="NewUrl">Entrez un lien puis appuyez sur le bouton pour l'ajouter à internet</label></br></br>
         <input 
     type="text"
     id="URL"
     required size= "45" 
     maxlength =  2300
     size = 100
-    placeholder="https://..."
+    placeholder="http://..."
     name = URL>
 </div>
 <div>
-    <button>
-        Envoyer!
+    <button class="button_new">
     </button>
 </div>
 </form>

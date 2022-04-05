@@ -4,23 +4,42 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="description" content ="Lets make internet together again">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Non</title>
+        <meta name= "author" content = "Théo Renard">
+        <title href= "https://soundcloud.com/non_guitare">Internet simulator</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    </head>
-    <header>
-        <h1>NON</h1>
-    </header>
-    <body>
+        <link rel="icon" href="{% static 'favicon.ico' %}"/>
 
+        <script type="text/javascript">
+          var Konamix=function(){function a(a,b,c){a.addEventListener?a.addEventListener(b,c,!1):a.attachEvent&&a.attachEvent("on"+b,function(b){return c.call(a,b)})}function b(a){var b="";for(var d=0;d<a.length;d++){var e=a[d].toUpperCase();typeof c[e]!="undefined"?b+=c[e]:b+=e.charCodeAt(0)}return b}var c={SPACE:32,ENTER:13,UP:38,DOWN:40,LEFT:37,RIGHT:39},d="38384040373937396665";return function(c){var e=function(){},f=function(){},g=c instanceof Array&&c.length>0?b(c):d,h="";(function(b){a(document,"keydown",function(a){h+=a.keyCode,console.log(h,g.indexOf(h)),h===g?(h="",b.isStarted?b.stop():b.start()):g.indexOf(h)===-1&&(h=a.keyCode+"")})})(this),this.isStarted=!1,this.onStart=function(a){return e=a,this},this.onStop=function(a){return f=a,this},this.start=function(){return e.call(this),this.isStarted=!0,this},this.stop=function(){return f.call(this),this.isStarted=!1,this}}}();
+          var k = new Konamix().onStart(function() {
+            window.location.href = 'https://www.linkedin.com/in/th%C3%A9o-renard-353106102/';})
+        </script>
+
+    </head>
+
+ 
+
+    <body>
+        <script type="text/javascript">
+            var bg_colour = Math.floor(Math.random() * 16777215).toString(16);
+            bg_colour = "#" + ("000000" + bg_colour).slice(-6);
+            document.bgColor = bg_colour;
+        </script>
+       
+
+            
+    <header>
+            <h3 id= "lab"> Internet simulator: </h3></br>
+            <h2 id= "lab"> Nombre de trucs sur internet:</h2>
+            <h1 id= "lab">{{C}}</h1>
+    </header>
         {% block content %}
         {% endblock %}
-
-        <script src="" async defer></script>
     </body>
     <footer>
-        <h3>bite</h3>
     </footer>
 </html>
