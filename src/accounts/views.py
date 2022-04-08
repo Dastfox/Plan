@@ -16,7 +16,7 @@ import requests
 from django.core.validators import URLValidator
 from accounts.models import Random_Link, entry_list
 import random
-
+from planning_app.views import index_app
 
 
 
@@ -25,7 +25,9 @@ def index_acc(request):
         entry_list = list (Random_Link.objects.all())
         compteur =  len(entry_list)       
         return render(request, 'accounts/index.html', 
-                      context = {"C": compteur})
+                      context = {"C": compteur, 
+                                 "O": "take_me_to_internet", 
+                                 "Label": "Naviguer dans l'internet?"})
         
     URL = request.POST.get("URL")
     validate = URLValidator()
@@ -48,14 +50,19 @@ def index_acc(request):
 def thanks (request):
     entry_list = list(Random_Link.objects.all())
     compteur =  len(entry_list)       
-    return render(request,'accounts/thanks.html',context = {"C": compteur})
+    return render(request,'accounts/thanks.html',context = {"C": compteur,"O": "new", "Label": "Retour"})
 
 def Error (request):
     entry_list = list(Random_Link.objects.all())
     compteur =  len(entry_list)       
-    return render(request,'accounts/Error.html',context = {"C": compteur})
+    return render(request,'accounts/Error.html',context =  {"C": compteur,"O": "new", "Label": "Retour"})
 
 def already (request):
     entry_list = list(Random_Link.objects.all())
     compteur =  len(entry_list)       
-    return render(request,'accounts/already.html',context = {"C": compteur})
+    return render(request,'accounts/already.html',context =  {"C": compteur,"O": "new", "Label": "Retour"})
+
+def about (request):
+    entry_list = list(Random_Link.objects.all())
+    compteur =  len(entry_list)       
+    return render(request,'accounts/about.html',context =  {"C": compteur,"O": "take_me_to_internet", "Label": "Retour"})

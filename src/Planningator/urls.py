@@ -17,7 +17,7 @@ from unicodedata import name
 from django.contrib import admin
 from django.urls import path
 from planning_app.views import delete, index_app, redirection
-from accounts.views import Error, index_acc, thanks, already
+from accounts.views import Error, index_acc, thanks, already, about
 
 
 urlpatterns = [
@@ -28,5 +28,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('error', Error, name= 'error',),
     path('already', already ,name = "already"),
-    path('deletetheuniverse',delete,name = 'delete',)
+    path('deletetheuniverse',delete,name = 'delete',),
+    path('about',about,name = 'about'),
 ]

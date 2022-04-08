@@ -12,7 +12,11 @@ def index_app(request):
     random_link = random.choice(Random_Link.objects.all())
     entry_list = list (Random_Link.objects.all())
     compteur =  len(entry_list)
-    return render(request, 'planning_app/index.html',context={"Q": random_link.link, "C": compteur})
+    return render(request, 'planning_app/index.html',
+                  context={"Q": random_link.link, 
+                           "C": compteur,
+                           "O": "new", 
+                           "Label": "Ajouter un truc à l'internet?"})
 
 def delete(request): 
     random_link = random.choice(Random_Link.objects.all())
