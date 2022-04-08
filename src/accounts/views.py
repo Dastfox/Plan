@@ -1,7 +1,4 @@
-# from distutils.log import error
-# from logging import exception
-# from tabnanny import check
-# from venv import create
+
 from django.forms import ValidationError
 from django.shortcuts import redirect, render
 from .models import Random_Link
