@@ -1,1 +1,1 @@
-web: gunicorn Planningator.wsgi
+web: gunicorn planningator.wsgi
