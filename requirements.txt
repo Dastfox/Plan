@@ -1,1 +1,1 @@
--r Planningator/requirements.txt
+-r src/requirements.txt
