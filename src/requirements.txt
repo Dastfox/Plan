@@ -8,6 +8,7 @@ heroku==0.1.4
 httplib2==0.20.4
 idna==3.3
 openpyxl==3.0.9
+ordereddict==1.1
 pyparsing==3.0.7
 python-dateutil==1.5
 requests==2.27.1
