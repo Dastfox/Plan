@@ -1,1 +1,1 @@
-web: gunicorn src/Planningator.wsgi --log-file -
+web: gunicorn Planningator.wsgi --log-file -
