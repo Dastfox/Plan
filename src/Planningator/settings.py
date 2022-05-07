@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'Planningator.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'mydb',                     
-        'USER': 'myuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'NAME': 'deaph9u9396i6u',                     
+        'USER': 'dbjbmdshmsofrv',
+        'PASSWORD': '20efa1bc6ca7f4a120d978ee51f3d9c366f92c98c042cec230d36a8814fe2ac7',
+        'HOST': 'ec2-52-18-116-67.eu-west-1.compute.amazonaws.com',                      # Empty for localhost through domain sockets or           '127.0.0.1' for localhost through TCP.
+        'PORT': '5432',                      # Set to empty string for default.
     }
 }
 
