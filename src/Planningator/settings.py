@@ -83,16 +83,25 @@ WSGI_APPLICATION = 'Planningator.wsgi.application'
 # DATABASES = {}
 import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES = {   
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd5io6midpsh7ds',
-        'USER': 'xstxtjhkwphglq',
-        'PASSWORD': '4e12a6b6d0ac6e60ab08259ed65646078e4201ec27ef9c480e469a5fcefe3cc4',
-        'HOST': 'ec2-52-30-67-143.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
-    } 
+# DATABASES = {   
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'dummy_db',
+#         'USER': 'jeanmi',
+#         'PASSWORD': 'pouet',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     } 
+# }
+
+DATABASES = {
+    'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
