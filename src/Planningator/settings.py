@@ -85,19 +85,19 @@ WSGI_APPLICATION = 'Planningator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {}
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES = {     
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dummy_db',
-#         'USER': 'jeanmi',
-#         'PASSWORD': 'pouet',
-#         'HOST': '127.0.0.1',
-#         'PORT': '5432',
-#     } 
-# } 
+# DATABASES = {}
+# import dj_database_url
+# db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES = {     
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dummy_db',
+        'USER': 'jeanmi',
+        'PASSWORD': 'pouet',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+    } 
+} 
 
 # import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=600)
@@ -147,6 +147,3 @@ STATICFILES_DIRS = [BASE_DIR / 'static/']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # This should already be in your settings.py
-
-options = DATABASES['default'].get('OPTIONS', {})
-options.pop('sslmode', None)
