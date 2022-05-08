@@ -13,9 +13,11 @@ ordereddict==1.1
 psycopg2==2.9.3
 pyparsing==3.0.7
 python-dateutil==1.5
+python-dotenv==0.20.0
 requests==2.27.1
 sqlparse==0.4.2
 supervisor==4.2.4
 tzdata==2022.1
 urllib3==1.26.9
+waitress==2.1.1
 whitenoise==6.0.0
