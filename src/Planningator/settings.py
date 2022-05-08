@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'Planningator.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 # DATABASES = {}
-# import dj_database_url
+import dj_database_url
 # db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES = {     
     'default': {
@@ -94,9 +94,9 @@ DATABASES = {
     } 
 } 
 
-# import dj_database_url
-# db_from_env = dj_database_url.config(conn_max_age=600)
-# DATABASES['default'].update(db_from_env)
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -140,5 +140,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static/']
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
 
-# This should already be in your settings.py
