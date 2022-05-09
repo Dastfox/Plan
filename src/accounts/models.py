@@ -12,5 +12,4 @@ class Random_Link(models.Model):
         def __str__(self):
                 return self.link
         
-entry_list = list(Random_Link.objects.all())
     

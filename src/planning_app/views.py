@@ -2,7 +2,7 @@ from multiprocessing import context
 import random
 from django.shortcuts import redirect, render
 from django.db import  models  
-from accounts.models import Random_Link, entry_list
+from accounts.models import Random_Link
 from django.contrib.auth import get_user_model,login, logout, authenticate
 
 

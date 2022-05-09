@@ -4,7 +4,7 @@ from django.shortcuts import redirect, render
 from .models import Random_Link
 import requests
 from django.core.validators import URLValidator
-from accounts.models import Random_Link, entry_list
+from accounts.models import Random_Link
 from planning_app.views import index_app
 
 
